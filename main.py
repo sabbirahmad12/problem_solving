@@ -23,3 +23,15 @@ elif b > c :
     print("B is Big")
 else:
     print("C is big")
+
+""" 3ti Number er vitore Small Number Ber Korar Program"""
+a = float(input("Enter First Number: "))
+b = float(input("Enter Second Number: "))
+c = float(input("Enter Third Number: "))
+
+if (a < b) and (a < c):
+    print("A is small")
+elif b < c :
+    print("B is Small")
+else:
+    print("C is small")
