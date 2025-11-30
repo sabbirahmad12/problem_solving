@@ -93,3 +93,34 @@ for i in range (1, n+1):
     #             *****
 
 #---------------------------------
+
+# """ Palindrome Number Ber Korar Program"""
+n = int(input("Enter a number: "))
+
+if n == n[::-1]:
+    print(f"{n} is a Palindrome")
+else:
+    print(f"{n} is not a palindrome")
+
+# """ Armstrong Number Ber Korar Program"""
+temp = n
+digits = len(str(n))
+total = 0
+
+while temp > 0:
+    digit = temp % 10
+    total += digit ** digits
+    temp //= 10
+
+if total == n:
+    print(f"{n} is an Armstrong number")
+else:
+    print(f"{n} is not an Armstrong number")
+
+# """ Factors of a /বিভাজক Number Ber Korar Program"""
+for i in range(1, n + 1):
+    if n % i == 0:
+        print("the result is: "+ str(i))
+
+#---------------------------------
+
