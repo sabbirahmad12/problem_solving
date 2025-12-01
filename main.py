@@ -124,3 +124,113 @@ for i in range(1, n + 1):
 
 #---------------------------------
 
+n = int(input("Enter a Number: "))
+
+# """ Prime Number Ber Korar Program"""
+if n < 2:
+    print("it is not Prime Number")
+else:
+    is_prime = True
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            is_prime =False
+            break
+    print("Prime" if is_prime else "Not Prime")
+
+
+# """ First N Prime Numbers Ber Korar Program"""
+primes = []
+number = 2
+
+while len(primes) < n:
+    is_prime = True
+    for i in range(2, int(n**0.5) + 1):
+        if number % i == 0:
+            is_prime = False
+            break
+        
+    if is_prime:
+        primes.append(number)
+    
+    number += 1
+print(primes)
+
+
+# """ Fibonacci Series Ber Korar Program"""
+a, b = 0, 1
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a+b
+
+
+# """ Nth Fibonacci Number Ber Korar Program"""
+if n <= 0:
+    print('Invalid input! Please enter a positive integer.')
+elif n == 1:
+    print(0)
+elif n == 2:
+    print(1)
+else:
+    a, b = 0, 1
+    for _ in range(3, n + 1):
+        a, b = b, a+b
+    print(b)
+
+
+# """ Area of Triangle Ber Korar Program"""
+base  = float(input("Enter base: "))
+height  = float(input("Enter height: "))
+
+area = 0.5 * base * height
+print("area of traiangle is:", area)
+#----------- / ----------------------
+import math
+def triangle_area(a, b, c):
+    if (a+b)>c and (b+c)>a and (c+a)>b:
+        s = (a+b+c)/2
+        area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+        print("Area of triangle is:", area)
+    else:
+        print("Triangle is not possible")
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+c = float(input("Enter third number: "))
+
+tarea = triangle_area(a, b, c)
+
+
+# """ Area of Circle Ber Korar Program"""
+r = float(input("Enter a Number: "))
+
+pi = 3.1416
+area = pi *(r**2) #--- pi * r squared
+print("Area of Circle is:", area)
+
+
+# """ Area of Rectangle Ber Korar Program"""
+lenght = float(input("Enter lenght: "))
+width = float(input("Enter width: "))
+
+area = lenght * width
+print("Area of Rectangle is:", area)
+
+
+# """ Remove Duplicates from a List Ber Korar Program"""
+
+my_List = [1,2,2,3,4,5,5,5,6,7,7,8,9,9,0]
+
+# n = input("Enter number of elements in the list: ")
+# my_list = [int(x.strip()) for x in n.split(",")]
+
+unique_list = []
+seen = set()
+for item in my_list:
+    if item not in seen:
+        unique_list.append(item)
+        seen.add(item)
+print("Unique List is:", unique_list)
+
+#------------------------------------
+
+
