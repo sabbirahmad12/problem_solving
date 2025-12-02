@@ -234,3 +234,124 @@ print("Unique List is:", unique_list)
 #------------------------------------
 
 
+# """ Count the frequency of each word in a string Ber Korar Program"""
+text = input("Enter a string: ").strip().split()
+
+count = {}
+
+for word in text:
+    if word in count:
+        count[word] += 1
+    else:
+        count[word] = 1
+for k, v in count.items():
+    print(f"{k}: {v}")
+
+
+# """ Factorial of a Number Ber Korar Program"""
+n =int(input("enter a number: "))
+
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+
+print("Factorial is: ",fact)
+
+
+# """ Sort a List of Tuples based on the second element Ber Korar Program"""
+data = input("enter a number: ").strip().split()
+
+tuples_list = []
+
+for item in data:
+    a, b = item.strip("()").split(",")
+    tuples_list.append((int(a), int(b)))
+sorted_list = sorted(tuples_list,  key=lambda x: x[1])
+
+for t in sorted_list:
+    print(f"({t[0]}, {t[1]})", end=" ")
+
+
+# """ Prime Numbers in a Given Range Ber Korar Program"""
+A, B = map(int, input().split())
+
+for num in range(A, B + 1):
+    if num < 2:
+        continue
+    
+    is_prime = True
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    
+    if is_prime:
+        print(num, end=" ")
+
+
+# """ Count Lines in a File Ber Korar Program"""
+count = 0
+
+with open("data.txt", "r") as f:
+    for _ in f:
+        count += 1
+
+print(count)
+
+
+# """ Even Numbers from a List Ber Korar Program"""
+numbers = list(map(int, input("List elements: ").split()))
+
+for n in numbers:
+    if n % 2 == 0:
+        print(n, end=" ")
+
+
+# """ Temperature Conversion Ber Korar Program"""
+C = float(input("Celsius: ").strip())
+F = float(input("Fahrenheit: ").strip())
+
+fahrenheit = (C * 9/5) + 32       # C → F
+celsius = (F - 32) * 5/9          # F → C
+
+print("C to F:", fahrenheit)
+print("F to C:", celsius)
+
+
+# """ Find Maximum and Minimum from a List Ber Korar Program"""
+numbers = list(map(int, input("Enter Numbers: ").split()))
+
+maximum = max(numbers)
+minimum = min(numbers)
+
+print("Max =", maximum)
+print("Min =", minimum)
+
+
+# """ Binary to Decimal Conversion Ber korar Program"""
+binary_num = input("Input Binary Number: ") 
+
+# Binary → Decimal
+decimal_num = int(binary_num, 2)
+
+print("Decimal =", decimal_num)
+
+
+# """ Reverse a String Ber korar Program"""
+text = input("Enter text: ")
+
+reversed_text = text[::-1]
+
+print(reversed_text)
+
+
+# """ Uppercase to Lowercase Ber korar Program"""
+text = input("Enter text: ")
+
+# Uppercase → Lowercase
+lower_text = text.lower()
+
+print("Lowercase:", lower_text)
+
+
+
